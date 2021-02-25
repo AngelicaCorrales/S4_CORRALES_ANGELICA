@@ -8,8 +8,9 @@ import java.text.DecimalFormat;
 
 public class Main {
 
-	private static double[] array;
-	private static DecimalFormat df = new DecimalFormat("#.0#");
+	public static double[] array;
+	public static DecimalFormat df = new DecimalFormat("#.0#");
+	public final static String SPLITTER=" ";
 	
 	public static void main(String[] args) throws IOException{
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));	
@@ -22,7 +23,7 @@ public class Main {
 		
 		for(int i=0; i<num;i++) {
 			String line = br.readLine();
-			String[] parts=line.split(" ");
+			String[] parts=line.split(SPLITTER);
 			array=new double[parts.length];
 	
 			for(int j=0; j<parts.length;j++) {
